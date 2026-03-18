@@ -1,0 +1,32 @@
+PATTERN 5 — Grid / Board Placement
+Recognition Clue:
+
+2D board
+
+Place something safely
+Validate before placing
+
+Examples:
+N Queens
+Sudoku
+Word Search
+
+Template Idea:
+boolean solve(int row) {
+
+    if (row == n) return true;
+
+    for (int col = 0; col < n; col++) {
+
+        if (isSafe(row, col)) {
+
+            place(row, col);
+
+            if (solve(row + 1)) return true;
+
+            remove(row, col);
+        }
+    }
+
+    return false;
+}

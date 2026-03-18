@@ -1,0 +1,56 @@
+import java.util.*;
+
+class Solution {
+    void bfs(int sr, int sc, char[][] grid, boolean[][] visited){
+        int m = grid.length;
+        int n = grid[0].length;
+        Queue<int[]> q = new LinkedList<>();
+        q.offer(new int[]{sr, sc});
+        visited[sr][sc] = true;
+        // 4-direction movement
+        int[][] dir = {{1,0},{-1,0},{0,1},{0,-1}};
+
+        while(!q.isEmpty()){
+
+            int[] cell = q.poll();
+            int r = cell[0];
+            int c = cell[1];
+            for(int[] d : dir){
+                int nr = r + d[0];
+                int nc = c + d[1];
+                if(nr>=0 && nc>=0 && nr<m && nc<n
+                   && !visited[nr][nc]
+                   && grid[nr][nc]=='1'){
+                    visited[nr][nc] = true;
+                    q.offer(new int[]{nr,nc});
+
+                }
+            }
+        }
+    }
+}
+
+static void bfs(int i,int j,char[][]grid,boolean[][]visited){
+    visited[i][j]=true;
+    Queue<int[]>q=new LinkedList<>();
+    int m=grid.length;
+    int n=grid[0].length;
+    q.offer(new int[]{i,j});
+    
+    int[][] dir = {{1,0},{-1,0},{0,1},{0,-1}};
+
+    while(!q.isEmpty()){
+        int []node=q.poll();
+        int x=node[0];
+        int y=node[1];
+         
+         for(int[] d:dir){
+            int nx=x+d[0];
+            int ny=y+d[1];
+            if(nx>=0 && ny>=0 &&nx<m &&ny>n){
+
+            }
+         }
+    }
+
+}

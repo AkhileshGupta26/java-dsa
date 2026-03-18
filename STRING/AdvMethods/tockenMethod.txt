@@ -1,0 +1,5 @@
+countTokens()   ->	Returns the total number of tokens present.
+hasMoreTokens()	->  Tests if tokens are present for the StringTokenizer’s string.
+nextElement()	->  Returns an Object rather than String.
+hasMoreElements()->	Returns the same value as hasMoreToken.
+nextToken()     ->	Returns the next token from the given StringTokenizer. 

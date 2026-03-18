@@ -1,0 +1,34 @@
+
+static int solve(int idx, int W, int[] val, int[] wt) {
+    // base case
+    if (idx == 0 || W == 0) return 0;
+
+    if (wt[idx - 1] <= W) {
+        return Math.max(
+            val[idx - 1] + solve(idx - 1, W - wt[idx - 1], val, wt),
+            solve(idx - 1, W, val, wt)
+        );
+    }
+
+    return solve(idx - 1, W, val, wt);
+}
+
+
+//memo code 
+
+static int solve(int idx, int W, int[] val, int[] wt, int[][] dp) {
+    if (idx == 0 || W == 0) return 0;
+
+    if (dp[idx][W] != -1) return dp[idx][W];
+
+    if (wt[idx - 1] <= W) {
+        dp[idx][W] = Math.max(
+            val[idx - 1] + solve(idx - 1, W - wt[idx - 1], val, wt, dp),
+            solve(idx - 1, W, val, wt, dp)
+        );
+        return dp[idx][W];
+    }
+
+    dp[idx][W] = solve(idx - 1, W, val, wt, dp);
+    return dp[idx][W];
+}

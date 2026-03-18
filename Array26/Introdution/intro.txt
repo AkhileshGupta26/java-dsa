@@ -1,0 +1,16 @@
+When the problem involves only lowercase English letters ('a'–'z'),
+we don’t need a HashMap — we can use an integer array of size 26 
+to store frequencies.
+
+int[] freq = new int[26];
+loop(){
+freq[ch - 'a']++;
+}
+ 
+
+| Feature     | HashMap                               | Array[26]                      |
+| ----------- | ------------------------------------- | ------------------------------ |
+| Key range   | Any char                              | Only 'a'–'z'                   |
+| Access time | O(1) (avg)                            | O(1) (direct)                  |
+| Memory      | Higher (objects)                      | Fixed 26 ints                  |
+| Best for    | General strings (mixed case, symbols) | Lowercase English letters only |

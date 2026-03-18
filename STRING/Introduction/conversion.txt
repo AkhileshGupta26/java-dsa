@@ -1,0 +1,15 @@
+| Character Type   | Expression     | Meaning                   |
+| ---------------- | -------------- | ------------------------- |
+| Digit ('0'-'9')  |  ch - '0'      | `'5'` → `5`               |
+| Letter ('a'-'z') |  ch - 'a' + 1  | `'a'` → `1`, `'z'` → `26` |
+
+char(integer type character) to int = -'0'
+char(letter) type to int = -'a'+1
+
+
+      (1) .toString() Method
+         Integer.toString(int) -> Integer to string 
+
+      (2) Integer.parseInt(str) -> String to Integer
+      
+        

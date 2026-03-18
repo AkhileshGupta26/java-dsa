@@ -1,0 +1,52 @@
+| Method                 | Purpose                          |
+| ---------------------- | -------------------------------- |
+| put(key, value)        | Add/update a key-value pair      |
+| get(key)               | Get value for a key              |
+| getOrDefault(key, def) | Get value, or default if missing |
+| containsKey(key)       | Check if key exists              |
+| containsValue(value)   | Check if value exists            |
+| remove(key)            | Remove a key                     |
+| size()                 | Number of elements in map        |
+| clear()                | Delete everything                |
+| entrySet()             | Get set of all key-value pairs   |
+
+Looping Through map
+
+for (Map.Entry<Integer, String> entry : map.entrySet()) {
+    System.out.println(entry.getKey() + " → " + entry.getValue());
+}
+
+###v.v.v.IMP
+
+for(int num:nums){
+            hm.put(num,hm.getOrDefault(num,0)+1);
+         }
+
+ for(int key:hm.keySet()){
+
+        if (hm.get(key) == 1) {
+                return key;
+        }
+     }
+     for(int value:hm.values()){
+        
+     }
+ for(int i=0;i<n;i++){
+        if(map.containsKey())
+ }    
+
+ for (Map.Entry<K, V> a : map.entrySet()) {
+    K key = a.getKey();
+    V value = a.getValue();
+}
+########IMP
+for (var e : map.entrySet()) {
+    int key = e.getKey();
+    int val = e.getValue();
+}
+var is a local variable type inference keyword.
+It tells the compiler:
+“You figure out the type based on the assigned value.”
+Introduced in Java 10.
+
+     

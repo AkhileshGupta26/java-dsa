@@ -1,0 +1,4 @@
+        
+        int maxVal = Collections.max(hm.values());
+        int minVal = Collections.min(hm.values());
+        

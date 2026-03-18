@@ -1,0 +1,5 @@
+Type	Loop Direction	Comparison	Goal
+NGE	Reverse (R→L)	<=	Next greater
+NSE	Reverse (R→L)	>=	Next smaller
+PGE	Forward (L→R)	<=	Previous greater
+PSE	Forward (L→R)	>=	Previous smaller

@@ -1,0 +1,125 @@
+🧩 1️⃣ Basic Way — Using split(" ")
+
+When words are separated by spaces, you can use Java’s String.split() method.
+
+String sentence = "hello world from java";
+String[] words = sentence.split(" ");
+
+
+Now:
+
+words = ["hello", "world", "from", "java"]
+
+🧠 2️⃣ Handling Multiple Spaces or Tabs
+
+Sometimes strings have extra spaces, tabs, or newlines, like:
+
+String s = "  hello   world\tfrom   java ";
+
+To handle any whitespace (space, tab, newline), use regex:
+
+String[] words = s.trim().split("\\s+");
+
+
+👉 \\s+ means “one or more whitespace characters”
+👉 trim() removes leading/trailing spaces
+
+Result:
+
+["hello", "world", "from", "java"]
+
+🔹 3️⃣ Splitting by a Specific Character (like commas, periods, etc.)
+
+If your string looks like this:
+
+String s = "apple,banana,grapes,mango";
+
+
+Use:
+
+String[] fruits = s.split(",");
+
+
+Output:
+
+["apple", "banana", "grapes", "mango"]
+
+⚙️ 4️⃣ Split by Multiple Delimiters
+
+Suppose your string has commas, periods, and spaces mixed:
+
+String s = "apple, banana. mango orange";
+
+
+You can split using regex OR (|):
+
+String[] words = s.split("[,\\.\\s]+");
+
+
+Explanation:
+
+[,] → comma
+
+[\\.] → period (escaped .)
+
+[\\s] → space
+
++ → one or more
+
+Result:
+
+["apple", "banana", "mango", "orange"]
+
+🧮 5️⃣ Iterate Over Words
+
+Once split, you can easily process words:
+
+for (String word : words) {
+    System.out.println(word);
+}
+
+
+Output:
+
+hello
+world
+from
+java
+
+💡 6️⃣ Count Words Using HashMap
+
+Now we can combine with HashMap or array logic:
+
+String s = "apple banana apple orange banana";
+String[] words = s.split(" ");
+HashMap<String, Integer> hm = new HashMap<>();
+
+for (String word : words) {
+    hm.put(word, hm.getOrDefault(word, 0) + 1);
+}
+
+System.out.println(hm);
+
+
+Output:
+
+{orange=1, banana=2, apple=2}
+
+🧠 7️⃣ Practice Examples
+Task	Sample Input	Approach
+Count number of words	"I love coding in Java"	split("\\s+") → length
+Find longest word	"Java is powerful"	compare word lengths
+Reverse each word	"hello world"	split → reverse → join
+Check word frequency	"cat dog cat"	use HashMap
+Capitalize each word	"java is fun"	split + substring(0,1).toUpperCase()
+🔍 8️⃣ Edge Cases
+Case	Example	Solution
+Extra spaces	" hello world "	use trim().split("\\s+")
+Empty string	""	check if(s.isEmpty()) return new String[0];
+Punctuation	"hi, there!"	remove with replaceAll("[^a-zA-Z ]", "") before split
+✅ Summary
+Task	Code	Output
+Basic split by space	split(" ")	["hi", "there"]
+Handle all whitespace	split("\\s+")	["hi", "there"]
+Split by comma	split(",")	["a", "b", "c"]
+Split by punctuation & space	split("[,\\.\\s]+")	["a", "b", "c"]

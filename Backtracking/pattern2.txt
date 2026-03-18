@@ -1,0 +1,22 @@
+PATTERN 2 — For Loop Choice (Combination Style)
+
+Recognition Clue:
+
+“Choose from remaining elements”
+Order does NOT matter
+Avoid duplicates
+We move forward in array
+
+void solve(int start, List<Integer> ds) {
+
+    ans.add(new ArrayList<>(ds));  // sometimes optional
+
+    for (int i = start; i < nums.length; i++) {
+
+        ds.add(nums[i]);
+
+        solve(i + 1, ds);  // move forward
+
+        ds.remove(ds.size() - 1);
+    }
+}

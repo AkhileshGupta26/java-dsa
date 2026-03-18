@@ -1,0 +1,17 @@
+| Type                     | Description                                              |
+| -------------------------| -------------------------------------------------------- |
+| (1)Start–End pointers    | One pointer from the beginning, one from the end         |
+| (2)Fast–Slow pointers    | One pointer moves faster (used in cycle detection, etc.) |
+| (3)Window-based pointers | Used in sliding window problems                          |
+
+(3) A way to efficiently process a subset (or "window") of elements in an array
+ or string by using two pointers, typically called start and end, that "slide"
+over the data structure.
+
+Instead of recalculating things from scratch every time (like sum, max, etc.),
+ we adjust the result as we move the window.
+
+ Process contiguous subarrays or substrings
+ Find maximum/minimum, sum, or count of subarrays/substrings of length k 
+ or with some condition
+

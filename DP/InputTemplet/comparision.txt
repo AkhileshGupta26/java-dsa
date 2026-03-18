@@ -1,0 +1,11 @@
+(1) n ≤ 10⁴ → Scanner is fine
+
+(2) n ≥ 10⁵ or 10⁶ → Use BufferedReader
+
+| Scanner              | BufferedReader       |
+| -------------------- | -------------------- |
+| Uses regex           | No regex             |
+| Parses automatically | You parse manually   |
+| Slower               | Faster               |
+| More memory overhead | Less overhead        |
+| Can TLE on big input | Safe for large input |

@@ -1,0 +1,6 @@
+PATTERN 3 — Permutation (Used Array)
+
+Recognition Clue:
+Order matters.
+“Return all permutations”
+Use every element exactly once.

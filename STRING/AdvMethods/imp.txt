@@ -1,0 +1,3 @@
+BENEFITS OF USING []26 ARRAY
+-> TC=O(1)
+instead if we uses HashMap TC=O(N);

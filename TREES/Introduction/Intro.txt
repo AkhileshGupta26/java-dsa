@@ -1,0 +1,5 @@
+One reason to use trees might be because you want to store information
+that naturally forms a hierarchy.
+For example, the file system on a computer:
+The DOM model of an HTML page is also tree where we have html tag as root,
+head and body its children and these tags, then have their own children

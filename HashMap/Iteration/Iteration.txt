@@ -1,0 +1,14 @@
+a) Using for-each on entrySet()
+
+for (Map.Entry<String, Integer> e : map.entrySet()) {
+    System.out.println(e.getKey() + " -> " + e.getValue());
+}
+
+b) Using keySet()
+for (String key : map.keySet()) {
+    System.out.println(key + " = " + map.get(key));
+}
+
+
+c) Using forEach() (Java 8+)
+map.forEach((key, value) -> System.out.println(key + ":" + value));

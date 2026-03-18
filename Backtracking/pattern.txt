@@ -1,0 +1,13 @@
+Ask ONE question:
+
+“At this level, how many choices do I have?”
+
+(1) 2 choices → Pick/Not Pick
+
+(2) Many choices from remaining → Loop + start index
+
+(3) Many choices from all elements → Loop + used[]
+
+(4) Try every cut → Partition loop
+
+(5) Try every position on board → Grid loop

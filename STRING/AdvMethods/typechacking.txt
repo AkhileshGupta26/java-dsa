@@ -1,0 +1,3 @@
+ Character.isDigit(c);
+ Character.isLetter(c);
+ Character.isUpperCase(c);

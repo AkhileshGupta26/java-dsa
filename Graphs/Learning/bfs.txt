@@ -1,0 +1,43 @@
+1️⃣ Level BFS (Track Distance)
+
+Add distance array:
+
+int[] dist = new int[n];
+dist[start] = 0;
+
+When visiting neighbor:
+dist[neighbor] = dist[node] + 1;
+
+2️⃣ Multi-Source BFS (Very Powerful)
+
+Used in:
+
+Fire spread
+Zombie spread
+Rotten oranges
+
+Instead of pushing one node:
+
+Push all sources into queue initially
+
+3️⃣ Grid BFS (Different Thing)
+
+In matrix problems like:
+Number of Islands
+Shortest Path in Binary Matrix
+Rotten Oranges
+
+The matrix itself is the graph.
+Example:
+
+1 1 0
+0 1 0
+0 1 1
+
+Each cell = node
+Neighbors = up/down/left/right
+No need to build adjacency list.
+Just use directions:
+
+int[][] dir = {{1,0},{-1,0},{0,1},{0,-1}};
+

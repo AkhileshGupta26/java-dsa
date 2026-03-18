@@ -1,0 +1,168 @@
+      
+        static int[][] dir = {
+            {0,1},   // right
+            {0,-1},  // left
+            {1,0},   // down
+            {-1,0}   // up
+        };
+
+        public void bfs(int sr, int sc, int[][] grid, boolean[][] visited){
+
+            int m = grid.length;
+            int n = grid[0].length;
+            Queue<int[]> q = new LinkedList<>();
+
+
+            q.offer(new int[]{sr, sc});
+            visited[sr][sc] = true;
+
+            while(!q.isEmpty()){
+
+                int[] cell = q.poll();
+                int r = cell[0];
+                int c = cell[1];
+
+                for(int[] d : dir){
+
+                    int nr = r + d[0];
+                    int nc = c + d[1];
+
+                    // 1️⃣ boundary check
+
+                    // 2️⃣ visited check
+
+                    // 3️⃣ problem condition check
+                    // (land, empty cell, fresh orange etc)
+
+                    // mark visited
+                    // push into queue
+                }
+            }
+        }
+        
+1️⃣ Boundary check
+
+nr >= 0
+nc >= 0
+nr < m
+nc < n
+
+2️⃣ Visited check
+!vis[nr][nc]
+
+3️⃣ Problem specific condition
+| Problem                     | Condition             |
+| --------------------------- | --------------------- |
+| Number of Islands           | `grid[nr][nc] == '1'` |
+| Rotten Oranges              | `grid[nr][nc] == 1`   |
+| Maze                        | `grid[nr][nc] != '+'` |
+| Shortest Path Binary Matrix | `grid[nr][nc] == 0`   |
+
+
+1️⃣ Flood Fill Pattern (Component Traversal)
+
+Used when the task is:
+count components
+fill region
+explore island
+mark connected cells
+
+Typical problems:
+Number of Islands
+Flood Fill
+Counting Rooms (CF)
+Surrounded Regions
+
+Key Idea
+Start BFS whenever you discover a new component.
+
+Mental flow:
+scan entire grid
+
+if cell belongs to component AND not visited
+    start BFS
+    mark whole component
+    increase count
+
+Skeleton hint:
+
+for(i = 0 → m)
+   for(j = 0 → n)
+
+      if(cell is valid AND not visited)
+          bfs(i,j)
+          count++
+
+Inside BFS you just spread through valid cells.
+
+Key condition example:
+
+grid[nr][nc] == '1'
+2️⃣ Multi-Source BFS (Spread / Infection Problems)
+
+Used when something spreads simultaneously from multiple places.
+
+Typical problems:
+
+Rotting Oranges
+01 Matrix
+As Far From Land As Possible
+Walls and Gates
+
+Key Idea
+
+Instead of 1 starting node, you push all sources first.
+
+Mental model:
+
+push all starting points in queue
+run BFS together
+spread layer by layer
+
+Skeleton hint:
+
+Queue<int[]> q = new LinkedList<>();
+
+for(each cell)
+    if(source condition)
+        q.offer(cell)
+
+Then normal BFS runs.
+This automatically computes minimum distance/time from nearest source.
+
+3️⃣ Shortest Path Grid BFS
+
+Used when problem asks:
+
+minimum steps
+shortest path
+minimum moves
+Typical problems:
+Shortest Path in Binary Matrix
+
+Nearest Exit in Maze
+
+Knight Moves
+Maze problems
+Key Idea
+Every BFS level = one step of distance.
+
+Mental model:
+start from source
+expand neighbours
+each level represents +1 distance
+
+Skeleton hint:
+
+int steps = 0;
+
+while(!q.isEmpty()){
+
+    int size = q.size();
+
+    while(size-- > 0){
+        // explore neighbours
+    }
+
+    steps++;
+}
