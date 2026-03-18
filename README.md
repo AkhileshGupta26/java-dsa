@@ -1,4 +1,11 @@
-# 🚀 Java DSA – Akhil
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,100:2C5364&height=180&section=header&text=Java%20DSA%20Akhil&fontSize=35&fontAlignY=35&animation=fadeIn&fontColor=ffffff"/>
+</p>
+
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=24&duration=3000&color=00F7FF&center=t
+
 
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?size=25&duration=3000&color=00F7FF&center=true&vCenter=true&width=600&lines=Mastering+Data+Structures+%26+Algorithms;Java+Solutions+%7C+Clean+Code;Interview+Preparation+Journey;LeetCode+%7C+Codeforces+Practice" />
@@ -89,22 +96,7 @@ java-dsa-akhil/
 
 ---
 
-## 🔥 Problem Solving Platforms
 
-* LeetCode
-* Codeforces
-* GeeksforGeeks
-
----
-
-## 📈 Goals
-
-* Solve 500+ DSA problems
-* Master advanced algorithms
-* Crack top tech interviews
-* Build strong problem-solving intuition
-
----
 
 ## 🤝 Contribution
 
@@ -121,3 +113,27 @@ This is a personal learning repository, but suggestions are always welcome!
 ## ⭐ Support
 
 If you find this repository helpful, consider giving it a **star ⭐**
+
+---
+
+---
+
+---
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=22&duration=3000&color=FF9933&center=true&vCenter=true&width=600&lines=Made+with+❤️+in+India+🇮🇳;Crafted+with+Passion+and+Consistency;Building+Strong+Foundations+in+DSA" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Developer-Akhil-blue?style=for-the-badge&logo=github" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Cou
+
+  <p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF9933,100:138808&height=120&section=footer"/>
+</p>
+
+
+
