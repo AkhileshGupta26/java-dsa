@@ -29,7 +29,7 @@ for(int num:nums){
         }
      }
      for(int value:hm.values()){
-        
+        if(x>1) return true;   ..... x itself is value do not do hm.get(val) it's wrong  
      }
  for(int i=0;i<n;i++){
         if(map.containsKey())
@@ -44,6 +44,9 @@ for (var e : map.entrySet()) {
     int key = e.getKey();
     int val = e.getValue();
 }
+###########IMP
+HASHMAP COMPARISION ->  hm1.equals(hm2)
+
 var is a local variable type inference keyword.
 It tells the compiler:
 “You figure out the type based on the assigned value.”
