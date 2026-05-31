@@ -6,7 +6,13 @@ int[] freq = new int[26];
 loop(){
 freq[ch - 'a']++;
 }
- 
+
+//FOR INTEGER FREQ ARRAY
+int[] nums=new int[10];
+for(int a:nums){
+   freq[a]++;
+}
+
 
 | Feature     | HashMap                               | Array[26]                      |
 | ----------- | ------------------------------------- | ------------------------------ |
