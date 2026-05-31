@@ -45,6 +45,10 @@ public class Basic {
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
+        // USE EXTRA SPACE  AND REDUCE TIME COMPLEXITY 
+add()      -> O(1)
+contains() -> O(1)
+remove()   -> O(1)
 
 
     }
